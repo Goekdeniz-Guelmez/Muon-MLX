@@ -1,6 +1,6 @@
 # Muon: An optimizer for the hidden layers of neural networks
 
-This repo contains an implementation of the `Muon` optimizer described in [this thread](https://x.com/kellerjordan0/status/1842300916864844014) and [this writeup](https://kellerjordan.github.io/posts/muon/).
+This repo contains an implementation of the `Muon` optimizer originally described in [this thread](https://x.com/kellerjordan0/status/1842300916864844014) and [this writeup](https://kellerjordan.github.io/posts/muon/).
 
 ## Installation
 
@@ -37,9 +37,9 @@ E.g., for a ConvNet, `muon_params` should be all the convolutional filters, and 
 
 ## Example usage
 
-[Example use of this Muon in the NanoGPT speedrun](https://github.com/KellerJordan/modded-nanogpt/blob/d700b8724cbda3e7b1e5bcadbc0957f6ad1738fd/train_gpt.py#L519)
+[Example use in the NanoGPT speedrun](https://github.com/KellerJordan/modded-nanogpt/blob/d700b8724cbda3e7b1e5bcadbc0957f6ad1738fd/train_gpt.py#L519)
 
-[Example use of a Muon variant in the CIFAR-10 speedrun](https://github.com/KellerJordan/cifar10-airbench/blob/0e6f9614572d7e8e3c259905aebc7196f91d5d79/research/clean_muon.py#L220)
+[Example use in the CIFAR-10 speedrun](https://github.com/KellerJordan/cifar10-airbench/blob/28bff5f5b31e95aa45b5b20e1f48baf1ed98d5f6/airbench94_muon.py#L362)
 
 ## Hyperparameter tuning
 
@@ -52,19 +52,26 @@ For a comparison between AdamW, Shampoo, SOAP, and Muon for training a 124M-para
 
 ## Accomplishments
 
-* [Lowered the record for training to 94% on CIFAR-10 from 3.3 A100-seconds to 2.7 A100-seconds](https://github.com/KellerJordan/cifar10-airbench)
+* [Lowered the record for training to 94% on CIFAR-10 from 3.3 A100-seconds to 2.6 A100-seconds](https://github.com/KellerJordan/cifar10-airbench)
 * [Used to train a transformer to GPT-2 (XL) performance in $175 of compute](https://x.com/kellerjordan0/status/1850995958697308307)
 * [Improved the training speed record for attaining GPT-2 (small) performance by a factor of 1.35x](https://x.com/kellerjordan0/status/1842300916864844014)
+* [Used by the Kimi.ai frontier lab for scaled LLM training](https://x.com/Kimi_Moonshot/status/1893379158472044623)
+
+## More learning resources and results about Muon
+
+* [Blog post on Muon by Jialin Su (the creator of RoPE)](https://kexue.fm/archives/10592)
+* [Blog post by Jeremy Bernstein on theoretical background of Muon](https://jeremybernste.in/writing/deriving-muon)
+* [Tech report by Kimi.ai on using Muon for scaled training](https://arxiv.org/abs/2502.16982v1)
+* [Why we chose Muon: Our chain of thought (by Jianlin Su at Kimi.ai)](https://x.com/Kimi_Moonshot/status/1897929976948965870)
 
 ## Citation
 
-```
+```bibtex
 @misc{jordan2024muon,
   author       = {Keller Jordan and Yuchen Jin and Vlado Boza and You Jiacheng and
-                  Franz Cecista and Laker Newhouse and Jeremy Bernstein},
+                  Franz Cesista and Laker Newhouse and Jeremy Bernstein},
   title        = {Muon: An optimizer for hidden layers in neural networks},
   year         = {2024},
   url          = {https://kellerjordan.github.io/posts/muon/}
 }
 ```
-
